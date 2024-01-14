@@ -1,11 +1,11 @@
-  let inputElement = document.getElementById("name-input");
-  let inputValue = inputElement.value.trim();
+const nameInput = document.getElementById('name-input');
+    const nameOutput = document.getElementById('name-output');
 
-  let outputElement = document.getElementById("name-output");
+    nameInput.addEventListener('input', updateName);
 
-  if (inputValue !== "") {
-    outputElement.textContent = inputValue;
-  } else {
-    outputElement.textContent = "Anonymous";
-  }
+function updateName() {
+  const enteredName = nameInput.value.trim();
+  const displayName = enteredName === '' ? 'Anonymous' : enteredName;
 
+  nameOutput.textContent = displayName;
+}
