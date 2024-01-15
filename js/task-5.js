@@ -9,11 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const colorSpan = document.querySelector(".color");
   const changeColorBtn = document.querySelector(".change-color");
 
-  const newColor = getRandomHexColor();
-
-  body.style.backgroundColor = newColor;
-  colorSpan.textContent = newColor;
-
   changeColorBtn.addEventListener("click", function () {
     const newColor = getRandomHexColor();
 
